@@ -36,7 +36,7 @@ if (isset($_POST['update'])){
                 <form action="edit_esc.php?noesc=<?php echo $_GET['noesc'];?>" method="POST">
                     <div class="form-group mt-2 mb-2">
                         <label class="label">No. Escalafon</label>
-                        <input type="text" name='noesc' value="<?php echo $noescN; ?>" class="form-control" placeholder="Nuevo No. Escalafon">
+                        <input readonly type="text" name='noesc' value="<?php echo $noescN; ?>" class="form-control" placeholder="Nuevo No. Escalafon">
                     </div>
                     <div class="form-group mt-2 mb-2">
                         <label class="label">Registro</label>
