@@ -11,10 +11,19 @@ if (isset($_GET['noesc'])) {
         $row = mysqli_fetch_array($result);
         $noescN = $row[1];
         $registro = $row[2];
-        echo $noescN;
     }
 }
 
+if (isset($_POST['update'])){
+    $noescAc = $_GET['noesc'];
+    $registro = $_POST['registro'];
+
+    $query = "UPDATE ESCALAFON SET REGISTRO = $registro WHERE NOESC = $noesc";
+    mysqli_query($conex,$query);
+    $_SESSION['message'] = 'Actualizado con exito';
+    $_SESSION['message_type'] = 'info';
+    header("Location: index.php");
+}
 ?>
 
 
@@ -24,7 +33,7 @@ if (isset($_GET['noesc'])) {
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="card card-body">
-                <form action="save_esc">
+                <form action="edit_esc.php?noesc=<?php echo $_GET['noesc'];?>" method="POST">
                     <div class="form-group mt-2 mb-2">
                         <label class="label">No. Escalafon</label>
                         <input type="text" name='noesc' value="<?php echo $noescN; ?>" class="form-control" placeholder="Nuevo No. Escalafon">
