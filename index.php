@@ -46,8 +46,12 @@
                                 <td><?php echo $row[1] ?></td>
                                 <td><?php echo $row[2] ?></td>
                                 <td>
-                                    <a href="edit_esc.php?id=<?php echo $row[1] ?>">Editar</a>
-                                    <a href="delete_esc.php?id=<?php echo $row[1] ?>">Eliminar</a>
+                                    <a href="edit_esc.php?id=<?php echo $row[1] ?>" class="btn btn-secondary">
+                                        <i class="fas fa-marker"></i>
+                                    </a>
+                                    <a href="delete_esc.php?id=<?php echo $row[1] ?>" class="btn btn-danger">
+                                        <i class="far fa-trash-alt"></i>
+                                    </a>
                                 </td>
                             </tr>
                             <?php
