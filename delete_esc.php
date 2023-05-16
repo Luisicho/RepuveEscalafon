@@ -4,7 +4,7 @@
 
     if(isset($_GET['noesc'])){
         $noesc = $_GET['noesc'];
-        $query = "DELETE FROM ESCALAFON WHERE NOESC = $noesc";
+        $query = "DELETE FROM ESCALAFON WHERE NOESC = '$noesc'";
         $result = mysqli_query($conex,$query);
         if(!$result){
             die("error al borrar");

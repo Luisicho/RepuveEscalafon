@@ -18,7 +18,7 @@ if (isset($_POST['update'])){
     $noescAc = $_GET['noesc'];
     $registro = $_POST['registro'];
 
-    $query = "UPDATE ESCALAFON SET REGISTRO = $registro WHERE NOESC = $noesc";
+    $query = "UPDATE ESCALAFON SET REGISTRO = '$registro' WHERE NOESC = '$noesc'";
     mysqli_query($conex,$query);
     $_SESSION['message'] = 'Actualizado con exito';
     $_SESSION['message_type'] = 'info';
