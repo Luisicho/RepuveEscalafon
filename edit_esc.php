@@ -37,8 +37,8 @@ if (isset($_POST['update'])) {
     $registro = $_POST['registro'];
     $apaterno = $_POST['apaterno'];
     $amaterno = $_POST['amaterno'];
-    $nombre = '';
-    $telefono = '';
+    $nombre = $_POST['nombre'];
+    $telefono = $_POST['telefono'];
     $curp = '';
     $ine = '';
     $imss = '';
@@ -98,6 +98,18 @@ if (isset($_POST['update'])) {
                             <div class="col-6">
                                 <label class="label">Apellido Materno</label>
                                 <input type="text" name="amaterno" value="<?php echo $amaternoN; ?>" class="form-control" placeholder="Nuevo Apellido Materno">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-8">
+                                <label class="label">Nombre</label>
+                                <input type="text" name="nombre" value="<?php echo $nombreN; ?>" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="col-4">
+                                <label class="label">Telefono</label>
+                                <input type="number" name="telefono" value="<?php echo $telefonoN; ?>" class="form-control" placeholder="10 Digitos">
                             </div>
                         </div>
                     </div>
