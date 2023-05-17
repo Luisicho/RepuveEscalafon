@@ -52,7 +52,7 @@ if (isset($_POST['update'])){
                         <label class="label">Fecha <i class="fa fa-calendar" aria-hidden="true"></i></label>
                         <input type="text" value="<?php echo $fecha; ?>" class="form-control fj-date">
                     </div>
-                    <button class="btn btn-success" onclick="return  confirm('¿Actualizar registro?')" name="update">
+                    <button class="btn" style="background-color:#9dbf2d;color:white;" onclick="return  confirm('¿Actualizar registro?')" name="update">
                         Actualizar
                     </button>
                 </form>

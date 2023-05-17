@@ -27,7 +27,7 @@
                         <label class="label">Fecha <i class="fa fa-calendar" aria-hidden="true"></i></label>
                         <input type="text" class="form-control fj-date">
                     </div>
-                    <input type="submit" class="btn btn-success btn-block" name="save" value="Guardar">
+                    <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
             </div>
         </div>
