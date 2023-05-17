@@ -10,8 +10,8 @@ if (isset($_POST['save'])) {
         $registro = $_POST['registro'];
         $apaterno = $_POST['apaterno'];
         $amaterno = $_POST['amaterno'];
-        $nombre = '';
-        $telefono = '';
+        $nombre = $_POST['nombre'];
+        $telefono = $_POST['telefono'];
         $curp = '';
         $ine = '';
         $imss = '';
