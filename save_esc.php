@@ -8,8 +8,8 @@ if (isset($_POST['save'])) {
     if (strlen($_POST['noesc']) >= 1) {
         $noesc = $_POST['noesc'];
         $registro = $_POST['registro'];
-        $apaterno = '';
-        $amaterno = '';
+        $apaterno = $_POST['apaterno'];
+        $amaterno = $_POST['amaterno'];
         $nombre = '';
         $telefono = '';
         $curp = '';
