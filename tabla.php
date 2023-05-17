@@ -34,10 +34,10 @@
                     <td><?php echo $row[1] ?></td>
                     <td><?php echo $row[2] ?></td>
                     <td>
-                        <a href="edit_esc.php?noesc=<?php echo $row[1] ?>" class="btn btn-secondary">
+                        <a href="edit_esc.php?IDE=<?php echo $row[0] ?>" class="btn btn-secondary">
                             <i class="fas fa-marker"></i>
                         </a>
-                        <a href="delete_esc.php?noesc=<?php echo $row[1] ?>" class="btn btn-danger" onclick="return  confirm('¿Eliminar registro?')">
+                        <a href="delete_esc.php?IDE=<?php echo $row[0] ?>" class="btn btn-danger" onclick="return  confirm('¿Eliminar registro?')">
                             <i class="far fa-trash-alt"></i>
                         </a>
                     </td>

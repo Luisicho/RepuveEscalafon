@@ -2,24 +2,26 @@
 
 include("db.php");
 
-if (isset($_GET['noesc'])) {
-    $noesc = $_GET['noesc'];
+if (isset($_GET['IDE'])) {
+    $IDE = $_GET['IDE'];
 
-    $query = "SELECT * FROM ESCALAFON WHERE NOESC = $noesc";
+    $query = "SELECT * FROM ESCALAFON WHERE IDE = $IDE";
     $result = mysqli_query($conex, $query);
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_array($result);
+        $IDEN = $row[0];
         $noescN = $row[1];
         $registro = $row[2];
     }
 }
 
 if (isset($_POST['update'])){
+    $IDEac = $_GET['IDE'];
     //toma datos de name textos
-    $noescAc = $_GET['noesc'];
+    $noescAc = $_POST['noesc'];
     $registro = $_POST['registro'];
     //consulta actualizar
-    $query = "UPDATE ESCALAFON SET REGISTRO = '$registro' WHERE NOESC = '$noesc'";
+    $query = "UPDATE ESCALAFON SET NOESC = '$noescAc', REGISTRO = '$registro' WHERE IDE = '$IDEac'";
     //ejecuta query
     mysqli_query($conex,$query);
     //Guarda mensaje de alerta
@@ -37,10 +39,10 @@ if (isset($_POST['update'])){
     <div class="row">
         <div class="col-md-12 mx-auto">
             <div class="card card-body">
-                <form action="edit_esc.php?noesc=<?php echo $_GET['noesc'];?>" method="POST">
+                <form action="edit_esc.php?IDE=<?php echo $_GET['IDE'];?>" method="POST">
                     <div class="form-group mt-2 mb-2">
                         <label class="label">No. Escalafon</label>
-                        <input readonly type="text" name='noesc' value="<?php echo $noescN; ?>" class="form-control" placeholder="Nuevo No. Escalafon">
+                        <input type="text" name='noesc' value="<?php echo $noescN; ?>" class="form-control" placeholder="Nuevo No. Escalafon">
                     </div>
                     <div class="form-group mt-2 mb-2">
                         <label class="label">Registro</label>
@@ -54,27 +56,5 @@ if (isset($_POST['update'])){
         </div>
     </div>
 </div>
-
-<script>
-    var mensaje = toastr.options = {
-        "closeButton": false,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": false,
-        "positionClass": "toast-top-center",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": 0,
-        "extendedTimeOut": 0,
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut",
-        "tapToDismiss": false
-    }
-    
-</script>
 
 <?php include("includes/footer.php") ?>

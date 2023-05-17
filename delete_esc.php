@@ -2,9 +2,9 @@
 
     include ("db.php");
 
-    if(isset($_GET['noesc'])){
-        $noesc = $_GET['noesc'];
-        $query = "DELETE FROM ESCALAFON WHERE NOESC = '$noesc'";
+    if(isset($_GET['IDE'])){
+        $IDE = $_GET['IDE'];
+        $query = "DELETE FROM ESCALAFON WHERE IDE = '$IDE'";
         $result = mysqli_query($conex,$query);
         if(!$result){
             die("error al borrar");
