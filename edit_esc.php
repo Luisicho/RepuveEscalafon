@@ -39,9 +39,9 @@ if (isset($_POST['update'])) {
     $amaterno = $_POST['amaterno'];
     $nombre = $_POST['nombre'];
     $telefono = $_POST['telefono'];
-    $curp = '';
-    $ine = '';
-    $imss = '';
+    $curp = $_POST['curp'];
+    $ine = $_POST['ine'];
+    $imss = $_POST['imss'];
     $calle = '';
     $noext = '';
     $colonia = '';
@@ -105,11 +105,27 @@ if (isset($_POST['update'])) {
                         <div class="row">
                             <div class="col-8">
                                 <label class="label">Nombre</label>
-                                <input type="text" name="nombre" value="<?php echo $nombreN; ?>" class="form-control" placeholder="Nombre">
+                                <input type="text" name="nombre" value="<?php echo $nombreN; ?>" class="form-control" placeholder="Nuevo Nombre">
                             </div>
                             <div class="col-4">
                                 <label class="label">Telefono</label>
-                                <input type="number" name="telefono" value="<?php echo $telefonoN; ?>" class="form-control" placeholder="10 Digitos">
+                                <input type="number" name="telefono" value="<?php echo $telefonoN; ?>" class="form-control" placeholder="Nuevo Telefono">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="label">C.U.R.P.</label>
+                                <input type="text" name="curp" value="<?php echo $curpN; ?>" class="form-control" placeholder="Nueva CURP">
+                            </div>
+                            <div class="col-4">
+                                <label class="label">I.N.E.</label>
+                                <input type="text" name="ine" value="<?php echo $ineN; ?>" class="form-control" placeholder="Nuevo INE">
+                            </div>
+                            <div class="col-4">
+                                <label class="label">I.M.S.S.</label>
+                                <input type="text" name="imss" value="<?php echo $imssN; ?>" class="form-control" placeholder="Nuevo IMSS">
                             </div>
                         </div>
                     </div>
