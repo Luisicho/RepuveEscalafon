@@ -12,9 +12,9 @@ if (isset($_POST['save'])) {
         $amaterno = $_POST['amaterno'];
         $nombre = $_POST['nombre'];
         $telefono = $_POST['telefono'];
-        $curp = '';
-        $ine = '';
-        $imss = '';
+        $curp = $_POST['curp'];
+        $ine = $_POST['ine'];
+        $imss = $_POST['imss'];
         $calle = '';
         $noext = '';
         $colonia = '';
