@@ -57,6 +57,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="label">C.U.R.P.</label>
+                                <input type="text" name="curp" class="form-control" placeholder="CURP">
+                            </div>
+                            <div class="col-4">
+                                <label class="label">I.N.E.</label>
+                                <input type="text" name="ine" class="form-control" placeholder="INE">
+                            </div>
+                            <div class="col-4">
+                                <label class="label">I.M.S.S.</label>
+                                <input type="text" name="imss" class="form-control" placeholder="IMSS">
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group mb-2">
                         <label class="label">Tipo de Licencia <i class="fa fa-id-card" aria-hidden="true"></i></label>
                         <select class="custom-select form-control" name="tipo" id="tipo">
