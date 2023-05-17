@@ -23,9 +23,9 @@
                         <label class="label">Registro</label>
                         <input type="text" name="registro" class="form-control" placeholder="Registro">
                     </div>
-                    <div class="form-group date mb-2">
+                    <div class="form-group date mb-2 ">
                         <label class="label">Fecha <i class="fa fa-calendar" aria-hidden="true"></i></label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control fj-date">
                     </div>
                     <input type="submit" class="btn btn-success btn-block" name="save" value="Guardar">
                 </form>
@@ -34,5 +34,8 @@
     </div>
 
 </div>
+
+<!-- index JS -->
+<script src="./js/index.js"></script>
 
 <?php include("includes/footer.php") ?>
