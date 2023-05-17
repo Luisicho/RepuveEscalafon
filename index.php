@@ -92,6 +92,12 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- <div class="form-group mt-2 mb-2">
+                        <label class="label">Antiguedad</label>
+                        <input type="file" class="form-control" name="antiguedad">
+                    </div> -->
+
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
             </div>
