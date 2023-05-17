@@ -48,8 +48,8 @@ if (isset($_POST['update'])) {
     $cp = '';
     $localidad = '';
     $municipio = '';
-    $nolicencia = '';
-    $tipo = '';
+    $nolicencia = $_POST['nolicencia'];
+    $tipo = $_POST['tipo'];
     
     //consulta actualizar
     $query = "UPDATE ESCALAFON SET NOESC = '$noescAc', REGISTRO = '$registro',APATERNO='$apaterno',AMATERNO='$amaterno',NOMBRE='$nombre',TELEFONO='$telefono',CURP='$curp',INE='$ine',IMSS='$imss',CALLE='$calle',NOEXT='$noext',CP='$cp',LOCALIDAD='$localidad',MUNICIPIO='$municipio',NOLICENCIA='$nolicencia',TIPO='$tipo' WHERE IDE = '$IDEac'";
@@ -126,6 +126,79 @@ if (isset($_POST['update'])) {
                             <div class="col-4">
                                 <label class="label">I.M.S.S.</label>
                                 <input type="text" name="imss" value="<?php echo $imssN; ?>" class="form-control" placeholder="Nuevo IMSS">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="label">No. Licencia</label>
+                                <input type="text" name="nolicencia" value="<?php echo $nolicenciaN; ?>" class="form-control" placeholder="No. Licencia">
+                            </div>
+                            <div class="col-8">
+                                <label class="label">Tipo de Licencia <i class="fa fa-id-card" aria-hidden="true"></i></label>
+                                <select class="custom-select form-control" name="tipo" id="tipo">
+                                    <!-- Condicion lectura tipo -->
+                                    <?php 
+                                    print($tipoN);
+                                    print_r($tipoN);
+                                    switch ($tipoN){
+                                        case "Chofer":
+                                            ?>
+                                                <option value="Chofer" selected>Chofer</option>
+                                                <option value="Automovilista">Automovilista</option>
+                                                <option value="Transporte Publico">Transporte Publico</option>
+                                                <option value="Motociclista">Motociclista</option>
+                                                <option value="Permiso Menor">Permiso Menor</option>
+                                            <?php
+                                            break;
+                                        case "Automovilista":
+                                            ?>
+                                                <option value="Chofer">Chofer</option>
+                                                <option value="Automovilista" selected>Automovilista</option>
+                                                <option value="Transporte Publico">Transporte Publico</option>
+                                                <option value="Motociclista">Motociclista</option>
+                                                <option value="Permiso Menor">Permiso Menor</option>
+                                            <?php
+                                            break;
+                                        case "Transporte Publico":
+                                            ?>
+                                                <option value="Chofer">Chofer</option>
+                                                <option value="Automovilista">Automovilista</option>
+                                                <option value="Transporte Publico" selected>Transporte Publico</option>
+                                                <option value="Motociclista">Motociclista</option>
+                                                <option value="Permiso Menor">Permiso Menor</option>
+                                            <?php
+                                            break;
+                                        case "Motociclista":
+                                            ?>
+                                                <option value="Chofer">Chofer</option>
+                                                <option value="Automovilista">Automovilista</option>
+                                                <option value="Transporte Publico">Transporte Publico</option>
+                                                <option value="Motociclista" selected>Motociclista</option>
+                                                <option value="Permiso Menor">Permiso Menor</option>
+                                            <?php
+                                            break;
+                                        case "Permiso Menor":
+                                            ?>
+                                                <option value="Chofer">Chofer</option>
+                                                <option value="Automovilista">Automovilista</option>
+                                                <option value="Transporte Publico">Transporte Publico</option>
+                                                <option value="Motociclista">Motociclista</option>
+                                                <option value="Permiso Menor" selected>Permiso Menor</option>
+                                            <?php
+                                            break;
+                                        default:
+                                            ?>
+                                                <option>Seleccione</option>
+                                                <option value="Chofer">Chofer</option>
+                                                <option value="Automovilista">Automovilista</option>
+                                                <option value="Transporte Publico">Transporte Publico</option>
+                                                <option value="Motociclista">Motociclista</option>
+                                                <option value="Permiso Menor" selected>Permiso Menor</option>
+                                            <?php
+                                    } ?>
+                                </select>
                             </div>
                         </div>
                     </div>

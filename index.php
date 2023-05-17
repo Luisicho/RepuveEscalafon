@@ -92,9 +92,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group mb-2">
-
-                    </div>
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
             </div>
