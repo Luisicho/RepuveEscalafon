@@ -37,7 +37,7 @@
                         <a href="edit_esc.php?noesc=<?php echo $row[1] ?>" class="btn btn-secondary">
                             <i class="fas fa-marker"></i>
                         </a>
-                        <a href="delete_esc.php?noesc=<?php echo $row[1] ?>" class="btn btn-danger">
+                        <a href="delete_esc.php?noesc=<?php echo $row[1] ?>" class="btn btn-danger" onclick="return  confirm('¿Eliminar registro?')">
                             <i class="far fa-trash-alt"></i>
                         </a>
                     </td>
@@ -49,7 +49,7 @@
     </table>
 
     <?php }else{
-        
+
     } ?>
 
 </div>

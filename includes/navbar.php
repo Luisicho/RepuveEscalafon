@@ -11,6 +11,9 @@
       <div class="navbar-nav">
         <a class="nav-link" href="tabla.php">Tabla</a>
       </div>
+      <div class="navbar-nav">
+        <a class="nav-link" href="index.php">Agregar</a>
+      </div>
     </div>
   </div>
 </nav>

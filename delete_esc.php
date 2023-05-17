@@ -10,11 +10,9 @@
             die("error al borrar");
         }
 
-
-
         $_SESSION['message'] = "Eliminado Correctamente";
         $_SESSION['message_type'] = 'danger';
-        header("Location: index.php");
+        header("Location: tabla.php");
     }
 
 ?>

@@ -46,7 +46,7 @@ if (isset($_POST['update'])){
                         <label class="label">Registro</label>
                         <input type="text" name="registro" value="<?php echo $registro; ?>" class="form-control" placeholder="Nuevo Registro">
                     </div>
-                    <button class="btn btn-success" onclick="return  confirm('Actualizar registro?')" name="update">
+                    <button class="btn btn-success" onclick="return  confirm('¿Actualizar registro?')" name="update">
                         Actualizar
                     </button>
                 </form>
