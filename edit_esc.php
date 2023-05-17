@@ -48,6 +48,10 @@ if (isset($_POST['update'])){
                         <label class="label">Registro</label>
                         <input type="text" name="registro" value="<?php echo $registro; ?>" class="form-control" placeholder="Nuevo Registro">
                     </div>
+                    <div class="form-group date mb-2 ">
+                        <label class="label">Fecha <i class="fa fa-calendar" aria-hidden="true"></i></label>
+                        <input type="text" value="<?php echo $fecha; ?>" class="form-control fj-date">
+                    </div>
                     <button class="btn btn-success" onclick="return  confirm('¿Actualizar registro?')" name="update">
                         Actualizar
                     </button>
