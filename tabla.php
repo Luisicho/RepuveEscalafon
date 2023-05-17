@@ -17,9 +17,9 @@
     if ($result){
     ?>
 
-    <table class="table table-bordered" id="tablaEscalafon">
+    <table class="table table-striped table-bordered table-hover table-responsive" id="tablaEscalafon">
         <thead>
-            <tr>
+            <tr style="color:white; background-color: #9dbf2d;">
                 <th>No Escalafon</th>
                 <th>Registro</th>
                 <th>Acciones</th>
@@ -33,11 +33,11 @@
                 <tr>
                     <td><?php echo $row[1] ?></td>
                     <td><?php echo $row[2] ?></td>
-                    <td>
-                        <a href="edit_esc.php?IDE=<?php echo $row[0] ?>" class="btn btn-secondary">
+                    <td style="text-align:center">
+                        <a href="edit_esc.php?IDE=<?php echo $row[0] ?>" class="btn" style="background-color:#68b8cd;color:white;">
                             <i class="fas fa-marker"></i>
                         </a>
-                        <a href="delete_esc.php?IDE=<?php echo $row[0] ?>" class="btn btn-danger" onclick="return  confirm('¿Eliminar registro?')">
+                        <a href="delete_esc.php?IDE=<?php echo $row[0] ?>" class="btn" style="background-color:#cb0160;color:white;" onclick="return  confirm('¿Eliminar registro?')">
                             <i class="far fa-trash-alt"></i>
                         </a>
                     </td>
@@ -49,8 +49,11 @@
     </table>
 
     <?php }else{
-
-    } ?>
+        ?>
+        <div>
+            <label class="label">No se cuenta con informacion</label>
+        </div>
+    <?php } ?>
 
 </div>
 

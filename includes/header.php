@@ -18,6 +18,6 @@
     <script src="./libs/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="./libs/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.min.css"/>
 </head>
-<body>
+<body style="background: url('./assets/fondo.png') no-repeat;background-size: cover;" class="img-fluid">
 
 <?php include("navbar.php"); ?>
