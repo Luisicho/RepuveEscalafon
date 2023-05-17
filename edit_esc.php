@@ -31,7 +31,7 @@ if (isset($_POST['update'])){
 
 <div class="container p-1">
     <div class="row">
-        <div class="col-md-4 mx-auto">
+        <div class="col-md-12 mx-auto">
             <div class="card card-body">
                 <form action="edit_esc.php?noesc=<?php echo $_GET['noesc'];?>" method="POST">
                     <div class="form-group mt-2 mb-2">
