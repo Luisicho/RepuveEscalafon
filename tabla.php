@@ -3,7 +3,21 @@
 <?php include("includes/header.php") ?>
 
 <div class="container">
-    <table class="table table-bordered">
+    <?php if (isset($_SESSION['message'])) { ?>
+        <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+            <?= $_SESSION['message'] ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php session_unset();
+    } 
+    
+    //Consulta
+    $query = "SELECT * FROM ESCALAFON";
+    $result = mysqli_query($conex, $query);
+    if ($result){
+    ?>
+
+    <table class="table table-bordered" id="tablaEscalafon">
         <thead>
             <tr>
                 <th>No Escalafon</th>
@@ -14,8 +28,6 @@
         <tbody>
             <?php
 
-            $query = "SELECT * FROM ESCALAFON";
-            $result = mysqli_query($conex, $query);
             while ($row = mysqli_fetch_array($result)) {
             ?>
                 <tr>
@@ -35,6 +47,17 @@
             ?>
         </tbody>
     </table>
+
+    <?php }else{
+        
+    } ?>
+
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#tablaEscalafon').DataTable();
+    });
+</script>
 
 <?php include("includes/footer.php") ?>

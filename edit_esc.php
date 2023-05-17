@@ -15,14 +15,18 @@ if (isset($_GET['noesc'])) {
 }
 
 if (isset($_POST['update'])){
+    //toma datos de name textos
     $noescAc = $_GET['noesc'];
     $registro = $_POST['registro'];
-
+    //consulta actualizar
     $query = "UPDATE ESCALAFON SET REGISTRO = '$registro' WHERE NOESC = '$noesc'";
+    //ejecuta query
     mysqli_query($conex,$query);
+    //Guarda mensaje de alerta
     $_SESSION['message'] = 'Actualizado con exito';
     $_SESSION['message_type'] = 'info';
-    header("Location: index.php");
+    //redirecciona a tabla.php
+    header("Location: tabla.php");
 }
 ?>
 
@@ -42,7 +46,7 @@ if (isset($_POST['update'])){
                         <label class="label">Registro</label>
                         <input type="text" name="registro" value="<?php echo $registro; ?>" class="form-control" placeholder="Nuevo Registro">
                     </div>
-                    <button class="btn btn-success" name="update">
+                    <button class="btn btn-success" onclick="return  confirm('Actualizar registro?')" name="update">
                         Actualizar
                     </button>
                 </form>
@@ -50,5 +54,27 @@ if (isset($_POST['update'])){
         </div>
     </div>
 </div>
+
+<script>
+    var mensaje = toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": 0,
+        "extendedTimeOut": 0,
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut",
+        "tapToDismiss": false
+    }
+    
+</script>
 
 <?php include("includes/footer.php") ?>
