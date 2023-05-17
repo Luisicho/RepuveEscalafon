@@ -73,16 +73,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="label">No. Licencia</label>
+                                <input type="text" name="nolicencia" class="form-control" placeholder="No. Licencia">
+                            </div>
+                            <div class="col-8">
+                                <label class="label">Tipo de Licencia <i class="fa fa-id-card" aria-hidden="true"></i></label>
+                                <select class="custom-select form-control" name="tipo" id="tipo">
+                                    <option selected>Seleccione</option>
+                                    <option value="Chofer">Chofer</option>
+                                    <option value="Automovilista">Automovilista</option>
+                                    <option value="Transporte Publico">Transporte Publico</option>
+                                    <option value="Motociclista">Motociclista</option>
+                                    <option value="Permiso Menor">Permiso Menor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group mb-2">
-                        <label class="label">Tipo de Licencia <i class="fa fa-id-card" aria-hidden="true"></i></label>
-                        <select class="custom-select form-control" name="tipo" id="tipo">
-                            <option selected>Seleccione</option>
-                            <option value="Chofer">Chofer</option>
-                            <option value="Automovilista">Automovilista</option>
-                            <option value="Transporte Publico">Transporte Publico</option>
-                            <option value="Motociclista">Motociclista</option>
-                            <option value="Permiso Menor">Permiso Menor</option>
-                        </select>
+
                     </div>
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
