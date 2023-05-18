@@ -27,12 +27,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- FECHA EJEMPLO
-                    <div class="form-group date mb-2">
-                        <label class="label">Fecha <i class="fa fa-calendar" aria-hidden="true"></i></label>
-                        <input type="text" name="fecha" class="form-control fj-date">
-                    </div>
-                    -->
                     <div class="form-group mt-2 mb-2">
                         <div class="row">
                             <div class="col-6">
@@ -127,12 +121,30 @@
                         </div>
                     </div>
 
-                    <!-- <div class="form-group mt-2 mb-2">
-                        <label class="label">Antiguedad</label>
-                        <input type="file" class="form-control" name="antiguedad">
-                    </div> -->
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <!-- <div class="form-group mt-2 mb-2">
+                                <label class="label">Antiguedad</label>
+                                <input type="file" class="form-control" name="antiguedad">
+                            </div> -->
+                            <div class="col-4">
+                                <label class="label">Antiguedad <i class="fa fa-calendar" aria-hidden="true"></i></label>
+                                <input type="text" name="antiguedad" class="form-control fj-date">
+                            </div>
+                            <div class="col-4">
+                                <label class="label">Tiempo Antiguedad</label>
+                                <input readonly type="text" name="tiempoantiguedad" class="form-control" placeholder="Tiempo Antiguedad">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mt-2 mb-2">
+                        <textarea class="form-control" name="descripcion" placeholder="Descripcion" id="desc" style="height: 100px"></textarea>
+                        <label for="desc">Descripcion</label>
+                    </div>
 
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
+                    
                 </form>
             </div>
         </div>
