@@ -89,6 +89,24 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-2">
+                                <label class="label">Codigo Postal</label>
+                                <input type="text" name="cp" class="form-control" placeholder="Codigo Postal">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Localidad</label>
+                                <input type="text" name="localidad" class="form-control" placeholder="Localidad">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Municipio</label>
+                                <input type="text" name="municipio" class="form-control" placeholder="Municipio">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="form-group mt-2 mb-2">
                         <div class="row">
                             <div class="col-4">

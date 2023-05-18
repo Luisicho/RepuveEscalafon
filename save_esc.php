@@ -21,9 +21,14 @@ if (isset($_POST['save'])) {
         $municipio = '';
         $nolicencia = $_POST['nolicencia'];
         $tipo = $_POST['tipo'];
+        $comantiguedad = '';
+        $antiguedad = '';
+        $tiempoantiguedad = '';
+        $descripcion = '';
+
         //$antiguedad = $_POST['antiguedad'];
         //Consulta
-        $consulta = "INSERT INTO escalafon(NOESC, REGISTRO, APATERNO, AMATERNO, NOMBRE, TELEFONO, CURP, INE, IMSS, CALLE, NOEXT, COLONIA, CP, LOCALIDAD, MUNICIPIO, NOLICENCIA, TIPO,COMANTIGUEDAD, TIEMPOANTIGUEDAD, FECHAANTIGUEDAD) VALUES ('$noesc','$registro','$apaterno','$amaterno','$nombre','$telefono','$curp','$ine','$imss','$calle','$noext','$colonia','$cp','$localidad','$municipio','$nolicencia','$tipo','',0,'')";
+        $consulta = "INSERT INTO escalafon(NOESC, REGISTRO, APATERNO, AMATERNO, NOMBRE, TELEFONO, CURP, INE, IMSS, CALLE, NOEXT, COLONIA, CP, LOCALIDAD, MUNICIPIO, NOLICENCIA, TIPO, COMANTIGUEDAD, ANTIGUEDAD, TIEMPOANTIGUEDAD, DESCRIPCION) VALUES ('$noesc','$registro','$apaterno','$amaterno','$nombre','$telefono','$curp','$ine','$imss','$calle','$noext','$colonia','$cp','$localidad','$municipio','$nolicencia','$tipo',$comantiguedad, $antiguedad, $tiempoantiguedad, $descripcion)";
         //Insercion
         $resultado = mysqli_query($conex, $consulta);
 
@@ -141,6 +146,24 @@ if (isset($_POST['save'])) {
 
                     <div class="form-group mt-2 mb-2">
                         <div class="row">
+                            <div class="col-2">
+                                <label class="label">Codigo Postal</label>
+                                <input type="text" name="cp" value="<?php echo $_POST['cp']; ?>" class="form-control" placeholder="Codigo Postal">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Localidad</label>
+                                <input type="text" name="localidad" value="<?php echo $_POST['localidad']; ?>" class="form-control" placeholder="Localidad">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Municipio</label>
+                                <input type="text" name="municipio" value="<?php echo $_POST['municipio']; ?>" class="form-control" placeholder="Municipio">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
                             <div class="col-4">
                                 <label class="label">No. Licencia</label>
                                 <input type="text" name="nolicencia" value="<?php echo $_POST['nolicencia']; ?>" class="form-control" placeholder="No. Licencia">
@@ -212,6 +235,7 @@ if (isset($_POST['save'])) {
                         </div>
                     </div>
 
+                    
 
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>

@@ -27,6 +27,10 @@ if (isset($_GET['IDE'])) {
         $municipioN = $row[15];
         $nolicenciaN = $row[16];
         $tipoN = $row[17];
+        $comantiguedadN = $row[18];
+        $antiguedadN = $row[19];
+        $tiempoantiguedadN = $row[20];
+        $descripcionN = $row[21];
     }
 }
 
@@ -50,9 +54,13 @@ if (isset($_POST['update'])) {
     $municipio = '';
     $nolicencia = $_POST['nolicencia'];
     $tipo = $_POST['tipo'];
+    $comantiguedad = '';
+    $antiguedad = '';
+    $tiempoantiguedad = '';
+    $descripcion = '';
     
     //consulta actualizar
-    $query = "UPDATE ESCALAFON SET NOESC = '$noescAc', REGISTRO = '$registro',APATERNO='$apaterno',AMATERNO='$amaterno',NOMBRE='$nombre',TELEFONO='$telefono',CURP='$curp',INE='$ine',IMSS='$imss',CALLE='$calle',NOEXT='$noext',CP='$cp',LOCALIDAD='$localidad',MUNICIPIO='$municipio',NOLICENCIA='$nolicencia',TIPO='$tipo' WHERE IDE = '$IDEac'";
+    $query = "UPDATE ESCALAFON SET NOESC = '$noescAc', REGISTRO = '$registro',APATERNO='$apaterno',AMATERNO='$amaterno',NOMBRE='$nombre',TELEFONO='$telefono',CURP='$curp',INE='$ine',IMSS='$imss',CALLE='$calle',NOEXT='$noext',CP='$cp',LOCALIDAD='$localidad',MUNICIPIO='$municipio',NOLICENCIA='$nolicencia',TIPO='$tipo', COMANTIGUEDAD = '$comantiguedad', ANTIGUEDAD = '$antiguedad', TIEMPOANTIGUEDAD = '$tiempoantiguedad', DESCRIPCION = '$descripcion' WHERE IDE = '$IDEac'";
     //ejecuta query
     mysqli_query($conex, $query);
     //Guarda mensaje de alerta
@@ -129,6 +137,41 @@ if (isset($_POST['update'])) {
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="label">Calle</label>
+                                <input type="text" name="calle" value="<?php echo $calleN; ?>" class="form-control" placeholder="Nueva Calle">
+                            </div>
+                            <div class="col-2">
+                                <label class="label">No. Exterior</label>
+                                <input type="text" name="noext" value="<?php echo $noextN; ?>" class="form-control" placeholder="Nuevo No. Exterior">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Colonia</label>
+                                <input type="text" name="colonia" value="<?php echo $coloniaN; ?>" class="form-control" placeholder="Nueva Colonia">
+                            </div>
+                        </div>
+                    </div>       
+                    
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-2">
+                                <label class="label">Codigo Postal</label>
+                                <input type="text" name="cp" value="<?php echo $cpN; ?>" class="form-control" placeholder="Codigo Postal">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Localidad</label>
+                                <input type="text" name="localidad" value="<?php echo $localidadN; ?>" class="form-control" placeholder="Localidad">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Municipio</label>
+                                <input type="text" name="municipio" value="<?php echo $municipioN; ?>" class="form-control" placeholder="Municipio">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="form-group mt-2 mb-2">
                         <div class="row">
                             <div class="col-4">
@@ -200,23 +243,6 @@ if (isset($_POST['update'])) {
                             </div>
                         </div>
                     </div>
-
-                    <div class="form-group mt-2 mb-2">
-                        <div class="row">
-                            <div class="col-5">
-                                <label class="label">Calle</label>
-                                <input type="text" name="calle" value="<?php echo $calleN; ?>" class="form-control" placeholder="Nueva Calle">
-                            </div>
-                            <div class="col-2">
-                                <label class="label">No. Exterior</label>
-                                <input type="text" name="noext" value="<?php echo $noextN; ?>" class="form-control" placeholder="Nuevo No. Exterior">
-                            </div>
-                            <div class="col-5">
-                                <label class="label">Colonia</label>
-                                <input type="text" name="colonia" value="<?php echo $coloniaN; ?>" class="form-control" placeholder="Nueva Colonia">
-                            </div>
-                        </div>
-                    </div>                    
 
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
