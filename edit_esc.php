@@ -140,8 +140,6 @@ if (isset($_POST['update'])) {
                                 <select class="custom-select form-control" name="tipo" id="tipo">
                                     <!-- Condicion lectura tipo -->
                                     <?php 
-                                    print($tipoN);
-                                    print_r($tipoN);
                                     switch ($tipoN){
                                         case "Chofer":
                                             ?>
@@ -202,9 +200,7 @@ if (isset($_POST['update'])) {
                             </div>
                         </div>
                     </div>
-                    <button class="btn" style="background-color:#9dbf2d;color:white;" onclick="return  confirm('¿Actualizar registro?')" name="update">
-                        Actualizar
-                    </button>
+                    <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
             </div>
         </div>
