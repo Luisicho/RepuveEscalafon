@@ -13,16 +13,15 @@ if (isset($_POST['save'])) {
         $curp = $_POST['curp'];
         $ine = $_POST['ine'];
         $imss = $_POST['imss'];
-        $calle = '';
-        $noext = '';
-        $colonia = '';
+        $calle = $_POST['calle'];
+        $noext = $_POST['noext'];
+        $colonia = $_POST['colonia'];
         $cp = '';
         $localidad = '';
         $municipio = '';
         $nolicencia = $_POST['nolicencia'];
         $tipo = $_POST['tipo'];
         //$antiguedad = $_POST['antiguedad'];
-
         //Consulta
         $consulta = "INSERT INTO escalafon(NOESC, REGISTRO, APATERNO, AMATERNO, NOMBRE, TELEFONO, CURP, INE, IMSS, CALLE, NOEXT, COLONIA, CP, LOCALIDAD, MUNICIPIO, NOLICENCIA, TIPO,COMANTIGUEDAD, TIEMPOANTIGUEDAD, FECHAANTIGUEDAD) VALUES ('$noesc','$registro','$apaterno','$amaterno','$nombre','$telefono','$curp','$ine','$imss','$calle','$noext','$colonia','$cp','$localidad','$municipio','$nolicencia','$tipo','',0,'')";
         //Insercion
@@ -122,6 +121,24 @@ if (isset($_POST['save'])) {
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="label">Calle</label>
+                                <input type="text" name="calle" value="<?php echo $_POST['calle']; ?>" class="form-control" placeholder="Calle">
+                            </div>
+                            <div class="col-2">
+                                <label class="label">No. Exterior</label>
+                                <input type="text" name="noext" value="<?php echo $_POST['noext']; ?>" class="form-control" placeholder="No. Exterior">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Colonia</label>
+                                <input type="text" name="colonia" value="<?php echo $_POST['colonia']; ?>" class="form-control" placeholder="Colonia">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="form-group mt-2 mb-2">
                         <div class="row">
                             <div class="col-4">
@@ -194,6 +211,8 @@ if (isset($_POST['save'])) {
                             </div>
                         </div>
                     </div>
+
+
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
             </div>

@@ -42,9 +42,9 @@ if (isset($_POST['update'])) {
     $curp = $_POST['curp'];
     $ine = $_POST['ine'];
     $imss = $_POST['imss'];
-    $calle = '';
-    $noext = '';
-    $colonia = '';
+    $calle = $_POST['calle'];
+    $noext = $_POST['noext'];
+    $colonia = $_POST['colonia'];
     $cp = '';
     $localidad = '';
     $municipio = '';
@@ -133,7 +133,7 @@ if (isset($_POST['update'])) {
                         <div class="row">
                             <div class="col-4">
                                 <label class="label">No. Licencia</label>
-                                <input type="text" name="nolicencia" value="<?php echo $nolicenciaN; ?>" class="form-control" placeholder="No. Licencia">
+                                <input type="text" name="nolicencia" value="<?php echo $nolicenciaN; ?>" class="form-control" placeholder="Nuevo No. Licencia">
                             </div>
                             <div class="col-8">
                                 <label class="label">Tipo de Licencia <i class="fa fa-id-card" aria-hidden="true"></i></label>
@@ -200,6 +200,24 @@ if (isset($_POST['update'])) {
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group mt-2 mb-2">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="label">Calle</label>
+                                <input type="text" name="calle" value="<?php echo $calleN; ?>" class="form-control" placeholder="Nueva Calle">
+                            </div>
+                            <div class="col-2">
+                                <label class="label">No. Exterior</label>
+                                <input type="text" name="noext" value="<?php echo $noextN; ?>" class="form-control" placeholder="Nuevo No. Exterior">
+                            </div>
+                            <div class="col-5">
+                                <label class="label">Colonia</label>
+                                <input type="text" name="colonia" value="<?php echo $coloniaN; ?>" class="form-control" placeholder="Nueva Colonia">
+                            </div>
+                        </div>
+                    </div>                    
+
                     <input type="submit" class="btn btn-block" style="background-color:#9dbf2d;color:white;" name="save" value="Guardar">
                 </form>
             </div>
